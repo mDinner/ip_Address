@@ -20,6 +20,13 @@ export function addPostRequest(post) {
         name: post.name,
         title: post.title,
         content: post.content,
+        category: post.category,
+        rating: post.rating,
+        hasRating: post.hasRating,
+        othersCanRate: post.othersCanRate,
+        othersCanComment: post.othersCanComment,
+        commentsHaveRatings: post.commentsHaveRatings,
+        isPoll: post.isPoll,
       },
     }).then(res => dispatch(addPost(res.post)));
   };

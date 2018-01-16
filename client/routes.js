@@ -27,6 +27,7 @@ export default (
     <IndexRoute
       getComponent={(nextState, cb) => {
         require.ensure([], require => {
+          // landing page
           cb(null, require('./modules/Post/pages/PostListPage/PostListPage').default);
         });
       }}

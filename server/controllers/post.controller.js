@@ -34,10 +34,18 @@ export function addPost(req, res) {
   // Let's sanitize inputs
   newPost.title = sanitizeHtml(newPost.title);
   newPost.name = sanitizeHtml(newPost.name);
+  newPost.category = sanitizeHtml(newPost.category);
   newPost.content = sanitizeHtml(newPost.content);
+  newPost.rating = sanitizeHtml(newPost.rating);
+  newPost.hasRating = sanitizeHtml(newPost.hasRating);
+  // newPost.othersCanRate = sanitizeHtml(newPost.othersCanRate);
+  // newPost.othersCanComment = sanitizeHtml(newPost.othersCanComment);
+  // newPost.commentsHaveRatings = sanitizeHtml(newPost.commentsHaveRatings);
+  // newPost.isPoll = sanitizeHtml(newPost.isPoll);
 
   newPost.slug = slug(newPost.title.toLowerCase(), { lowercase: true });
   newPost.cuid = cuid();
+
   newPost.save((err, saved) => {
     if (err) {
       res.status(500).send(err);

@@ -1,5 +1,23 @@
 ![](http://res.cloudinary.com/hashnode/image/upload/w_200/v1466495663/static_imgs/mern/v2/mernio-logo.png)
 
+
+Our goals:
+ - main page that displays ip
+ 
+ - save ips over time in cookie and/or localstorage (make an array withing a serialized object that you keep
+ appending new ips to - this will have to be a string for the cookies as they are all strings)
+
+ - display other intersting stats
+ - save other interesting stats in serialized object that lives on cookies/localstorage
+
+ - create user accounts so you can view past stats and ping times. think of other good uses
+ for user accounts
+
+
+
+
+
+
 # mern-starter
 ![title](https://travis-ci.org/Hashnode/mern-starter.svg?branch=v2.0.0)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
